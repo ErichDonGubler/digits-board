@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Pairich Family | Digits board</title>
+		<style type="text/css">
+:root {
+	--num-digits: 4;
+	--num-dots-per-row: 3;
+	--dot-size: 2.75em;
+	--dot-spacing: calc(var(--dot-size) / 2);
+	--dpi: 88.5px;
+}
+
+body {
+	align-items: center;
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: auto auto auto auto;
+	grid-template-rows: var(--dot-size) auto auto;
+	height: calc(7.5 /* inches */ * var(--dpi));
+	justify-items: center;
+	width: calc(10.5 /* inches */ * var(--dpi));
+}
+
+	@media screen {
+		body {
+			border: 1px dotted green;
+		}
+	}
+
+	.digit-place {
+		font-size: var(--dot-size);
+	}
+
+	.digit-grid {
+		border: 2px solid black;
+		column-gap: var(--dot-spacing);
+		display: grid;
+		grid-template-columns: auto auto auto;
+		padding: var(--dot-spacing);
+		row-gap: calc(var(--dot-spacing) * 2);
+	}
+
+	.digit-grid .digit-grid-dot {
+		border-radius: calc(var(--dot-size) / 2);
+		border: 2px solid black;
+		height: var(--dot-size);
+		width: var(--dot-size);
+	}
+
+	.digit-blank {
+		border-bottom: 1px solid black;
+		height: var(--dot-size);
+		width: calc(var(--num-digits) * (var(--dot-size) / 2))
+	}
+		</style>
+	</head>
+	<body>
+		<div class="digit-place">1000</div>
+		<div class="digit-grid">
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+		</div>
+		<div class="digit-blank"></div>
+		<div class="digit-place">100</div>
+		<div class="digit-grid">
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+		</div>
+		<div class="digit-blank"></div>
+		<div class="digit-place">10</div>
+		<div class="digit-grid">
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+		</div>
+		<div class="digit-blank"></div>
+		<div class="digit-place">1</div>
+		<div class="digit-grid">
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+			<div class="digit-grid-dot"></div>
+		</div>
+		<div class="digit-blank"></div>
+	</body>
+</html>
